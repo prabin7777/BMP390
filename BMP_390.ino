@@ -1,4 +1,4 @@
-#include<Wire.h>
+#include <Wire.h>
 #define BMP390_I2C_ADDR       0x77        // The BMP390 I2C address
 #define BMP390_I2C_ALT_ADDR   0x76        // The BMP390 I2C alternate address
 #define BMP390_ID             0x50        // The BMP390 device ID
@@ -137,7 +137,7 @@ void setup() {
 
   
   long address=BMP390_I2C_ADDR;
-   readBytes(BMP390_TRIM_PARAMS, (uint8_t*)&params, sizeof(params)); // Read the trim parameters into the params structure
+  readBytes(BMP390_TRIM_PARAMS, (uint8_t*)&params, sizeof(params)); // Read the trim parameters into the params structure
   floatParams.param_T1 = (float)params.param_T1 / powf(2.0f, -8.0f); // Calculate the floating point trim parameters
   floatParams.param_T2 = (float)params.param_T2 / powf(2.0f, 30.0f);
   floatParams.param_T3 = (float)params.param_T3 / powf(2.0f, 48.0f);
