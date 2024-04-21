@@ -40,7 +40,7 @@ enum {
   BMP390_TRIM_PARAMS     = 0x31,          // Trim parameter registers' base sub-address
   BMP390_CMD             = 0x7E           // Command register sub-address
 };
- struct {                                                    // The BMP390 compensation trim parameters (coefficients)
+ struct {                                                    
       uint16_t param_T1;
       uint16_t param_T2;
       int8_t   param_T3;
@@ -57,7 +57,7 @@ enum {
       int8_t   param_P11;
  }params;
     
-    struct FloatParams {                                        // The BMP388 float point compensation trim parameters
+    struct FloatParams {                                        
       float param_T1;
       float param_T2;
       float param_T3;
